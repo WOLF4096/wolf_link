@@ -4,12 +4,12 @@ $time1 = microtime(true);
 $timec = (int)(($time1 - $time0)*1000000);
 echo "<!--开始计时：$timec μs-->";
 
-$xian = 200;                //每日创建上限
-$beia = "浙ICP备wolf4096号";//网站备案号
-$addr = "127.0.0.1";        //数据库地址
-$user = "te1_0l6_cc";       //数据库用户名
-$pass = "ptwLiJLMxp7c4jbr"; //数据库密码
-$name = "te1_0l6_cc";       //数据库名
+$xian = 200;          //每日创建上限
+$beia = "网站备案号";  //网站备案号
+$addr = "127.0.0.1";  //数据库地址
+$user = "WOLF4096";   //数据库用户名
+$pass = "WOLF4096";   //数据库密码
+$name = "WOLF4096";   //数据库名
 $conn = new mysqli($addr, $user, $pass, $name);
 
 //初始化数据库
