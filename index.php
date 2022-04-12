@@ -4,12 +4,12 @@ $time1 = microtime(true);
 $timec = (int)(($time1 - $time0)*1000000);
 echo "<!--开始计时：$timec μs-->";
 
-$xian = 200;          //每日创建上限
-$beia = "网站备案号";  //网站备案号
-$addr = "127.0.0.1";  //数据库地址
-$user = "WOLF4096";   //数据库用户名
-$pass = "WOLF4096";   //数据库密码
-$name = "WOLF4096";   //数据库名
+$xian = 200;                //每日创建上限
+$beia = "浙ICP备wolf4096号";//网站备案号
+$addr = "127.0.0.1";        //数据库地址
+$user = "te1_0l6_cc";       //数据库用户名
+$pass = "ptwLiJLMxp7c4jbr"; //数据库密码
+$name = "te1_0l6_cc";       //数据库名
 $conn = new mysqli($addr, $user, $pass, $name);
 
 //初始化数据库
@@ -36,6 +36,7 @@ $DL = $_SERVER["QUERY_STRING"];$DL=(String)substr($DL, 0, 2);
 $SJ = date('Y-m-d H:i:s',time());
 $IP = $_SERVER['REMOTE_ADDR'];
 $HT = $_SERVER['HTTP_HOST'];
+if ($CL == ""){
 echo '
 <!-- 狼介（WOLF4096）    Email: wolf4096@foxmail.com    QQ: 2275203821
  _       __   ____     __     ______   __ __   ____    ____    _____
@@ -76,7 +77,7 @@ https://github.com/WOLF4096    All Platform ID: WOLF4096
             <div class="con">
                 <div class="sou">
                 <a href="http://'.$HT.'/"><font color="#7092BE"><h1 align="center">狼链</h1></font></a>
-';
+';}
 if ($DL == ""){
     echo '                <br/>
                 <form action="" method="get" target="_self">
@@ -171,6 +172,7 @@ if ($DL == ""){
                 <br/><a href="http://'.$HT.'/"><font color="#7092BE"><h4 align="center">返回主页</h4></font></a>';    
 }
 $conn->close();
+if ($CL == ""){
 echo '
                 </div>
             </div>
@@ -178,8 +180,8 @@ echo '
         </div>
     </body>
 </html>
-';
+';}
 $time1 = microtime(true);
 $timec = (int)(($time1 - $time0)*1000000);
-echo "<!--结束计时：$timec μs-->\n";
+echo "\n<!--结束计时：$timec μs-->\n\n";
 ?>
